@@ -11,7 +11,7 @@ export default function InventoryPredictor() {
 
   // Fetch product data from API
   useEffect(() => {
-    fetch('http://localhost:8082/api/products') // fetch products from local API
+    fetch('https://my.api.mockaroo.com/product_sample?key=c29c3fd0') // fetch products from local API
       .then(res => { // if response not ok, throw error else return json
         if (!res.ok) {
           throw new Error(`Fetch Failed!: ${res.status} ${res.statusText}`);
@@ -154,3 +154,4 @@ export default function InventoryPredictor() {
 </div>
   );
 }
+
