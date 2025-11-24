@@ -97,6 +97,7 @@ export default function InventoryPredictor() {
                 avgSales: p.average_weekly_sales,
                 leadTime: p.lead_time,
                 reorder_point: reorderPoint, // Include Reorder Point in prediction results
+                
             });
         }
         setPredictionResults(preds);
@@ -148,7 +149,7 @@ export default function InventoryPredictor() {
                             <th>Stock</th>
                             <th>Avg Weekly Sales</th>
                             <th>Lead Time (days)</th>
-                            <th>Reorder Point (Units)</th> {/* NEW COLUMN */}
+                            <th>Days to Replenish (Units)</th> {/* NEW COLUMN */}
                             <th>Prediction</th>
                         </tr>
                     </thead>
@@ -182,3 +183,4 @@ export default function InventoryPredictor() {
         </div>
     );
 }
+
